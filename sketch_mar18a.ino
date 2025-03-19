@@ -46,11 +46,11 @@ void loop() {
   delay(1500);
  }
 
-  digitalWrite(ledY, HIGH);
+  digitalWrite(ledY, HIGH); //Letra P
   delay(100);
   digitalWrite(ledY, LOW);
   delay(500);
- for(x = 5; x < 7; x++){ //Letra P
+ for(x = 5; x < 7; x++){ 
   digitalWrite(ledY, HIGH);
   delay(800);
   digitalWrite(ledY, LOW);
