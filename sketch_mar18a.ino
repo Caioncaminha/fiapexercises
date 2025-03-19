@@ -86,5 +86,6 @@ case 'P':
 break;
     }
 delay(letterpause);
-} 
+}
+
 
