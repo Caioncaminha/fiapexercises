@@ -54,11 +54,40 @@ else:
 '''Exercício 5
     Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e
     escrevê-los em ordem crescente'''
+    
+'''print("Digite três valores inteiros diferentes")
+a = int(input("Primeiro valor:\n"))
+b = int(input("Segundo valor:\n"))
+c = int(input("Terceiro valor:\n"))
+if a < b < c:
+    print(f"{a}, {b}, {c}")
+elif a < c < b:
+    print(f"{a}, {c}, {b}")
+elif b < a < c:
+    print(f"{b}, {a}, {c}")
+elif b < c < a:
+    print(f"{b}, {c}, {a}")
+elif c < a < b:
+    print(f"{c}, {a}, {b}")
+elif c < b < a:
+    print(f"{c}, {b}, {a}")
+else:
+    print("Valores inválidos")'''
 
-'''a = int(input("Digite o primeiro número"))
-b = int(input("Digite o segundo número"))
-c = int(input("Digite o terceiro número"))'''
+'''Exercício 5
+    Exercício 5 feito de uma maneira diferente, utilizando"sort"'''
 
+'''print("Digite três valores inteiros diferentes")
+a = int(input("Primeiro valor:\n"))
+b = int(input("Segundo valor:\n"))
+c = int(input("Terceiro valor:\n"))
+lista = [a, b, c]
+lista.sort()
+print(lista)
+if a == b or a == c or b == c:
+    print("Valores inválidos")'''
+
+    
 '''Exercício 6
     Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1feminino, 2 masculino) de
     uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas:
@@ -80,11 +109,87 @@ else:
     - Se o número de lados for igual a 3 escrever TRIÂNGULO e o valor da área.
     - Se o número de lados for igual a 4 escrever QUADRADO e o valor da área.
     - Se o número de lados for igual a 5 escrever PENTÁGONO e o valor da área.'''
-print("Escreva um número de lados de um polígono regular e a medida de seus lados")
+
+'''print("Escreva um número de lados de um polígono regular e a medida de seus lados")
 lados = int(input("Quantidade de lados:\n"))
-area = int(input("Medida de um de seus lados:\n"))
+area = float(input("Medida de um de seus lados:\n"))
 if lados == 3:
     print(f"Você escolheu um TRIÂNGULO com área igual a {format(area * (area * 0.5)/2)}")
-if lados == 4:
-    print()
+elif lados == 4:
+    print(f"Você escolheu um QUADRADO com área igual a {format(area * area)}")
+elif lados == 5:
+    print(f"Você escolheu um PENTÁGONO com área igual a {format(1.72 * area ** 2)}")
+else:
+    print("Escolha um número de lados válido (3, 4 ou 5)")'''
 
+'''Exercício 8'
+    Acresente as seguintes mensagens à solução do exercício anterior conforme o caso.
+    - Caso o número de lados seja inferior a 3 escrever NÃO É UM POLÍGONO.'
+    - Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO.'''
+
+'''print("Escreva um número de lados de um polígono regular e a medida de seus lados")
+lados = int(input("Quantidade de lados:\n"))
+area = float(input("Medida de um de seus lados:\n"))
+if lados == 3:
+    print(f"Você escolheu um TRIÂNGULO com área igual a {format(area * (area * 0.5)/2)}")
+elif lados == 4:
+    print(f"Você escolheu um QUADRADO com área igual a {format(area * area)}")
+elif lados == 5:
+    print(f"Você escolheu um PENTÁGONO com área igual a {format(1.72 * area ** 2)}")
+else:
+    print("Escolha um número de lados válido (3, 4 ou 5)")
+if lados < 3:
+    print("NÃO É UM POLÍGONO")
+elif lados > 5:
+    print("POLÍGONO NÃO IDENTIFICADO")'''
+
+'''Exercício 9
+    Escreva um programa para ler 3 valores inteiros e escrever o maior deles.'
+    Considere que o usuário não informará valores iguais.'''
+
+'''a = int(input("Digite o primeiro número\n"))
+b = int(input("Digite o segundo número\n"))
+c = int(input("Digite o terceiro número\n"))
+if a > b and a > c:
+    print(f"O número {a} é o maior")
+elif b > a and b > c:
+    print(f"O número {b} é o maior")
+else:
+    print(f"O número {c} é o maior")'''
+
+'''Exercício 10
+    Escreva um programa que leia as medidas dos lados de um triângulo e escreva se ele é equilátero, isósceles ou escaleno.
+    Sendo que:
+    - Triângulo Equilátero: possui os 3 lados iguais.
+    - Triângulo Isósceles: possui 2 lados iguais.'
+    - Triângulo Escaleno: possui 3 lados diferentes.'''
+
+'''print("Digite as medidas dos lados de um triângulo")
+a = float(input("Digite o primeiro lado\n"))
+b = float(input("Digite o segundo lado\n"))
+c = float(input("Digite o terceiro lado\n"))
+if a == b == c:
+    print("Este triângulo é equilátero")
+elif a == b or a == c or b == c:
+    print("Este triângulo é isósceles")
+else:
+    print("Este triângulo é escaleno")'''
+
+'''Exercício 11'
+    Escreva um programa que leia o valor de 3 ângulos de um triângulo e escreva se o triângulo é Acutângulo, Retângulo
+    ou Obtusângulo.
+    Sendo que:
+    - Triângulo Retângulo: possui um ângulo reto (igual a 90º).
+    - Triângulo Obtusângulo: possui um ângulo obtuso (maior que 90º).
+    - Triângulo Acutângulo: possui três ângulos agudos (menor que 90º).'''
+
+'''print("Digite os ângulos de um triângulo")
+a = int(input("Digite o primeiro ângulo\n"))
+b = int(input("Digite o segundo ângulo\n"))
+c = int(input("Digite o terceiro ângulo\n"))
+if a == 90 or b == 90 or c == 90:
+    print("Este triângulo é retângulo")
+elif a > 90 or b > 90 or c > 90:
+    print("Este triângulo é obtusângulo")
+elif a < 90 and b < 90 and c < 90:
+    print("Este triângulo é acutângulo")'''
