@@ -110,4 +110,3 @@ if deficiente == 'sim' and cartaodef == 'sim':
     print("Pó estacionar 🛴🛴")
 else:
     print("rala carai 😠😠👊👊")
-    
