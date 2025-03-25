@@ -21,8 +21,7 @@ void loop() {
 
   dist = pulseIn(echo, HIGH);
   dist = dist / 58;
-  Serial.println("distância: "+ String(dist) + String("cm"));
-  delay(2000);
+  Serial.println("distância: "+ String(dist));
 
   if(dist<=15){
     digitalWrite(ledR, HIGH);
@@ -34,7 +33,7 @@ void loop() {
     digitalWrite(ledY, HIGH);
     digitalWrite(ledG, LOW);
     }
-  else if(dist>30&&dist<=400);{
+  else if(dist>30){
     digitalWrite(ledR, LOW);
     digitalWrite(ledY, LOW);
     digitalWrite(ledG, HIGH);
