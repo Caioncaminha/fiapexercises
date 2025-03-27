@@ -16,8 +16,8 @@ else:
     Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá
     votar ou não vota este ano (desconsidere meses)'''
 
-'''print("Digite seu ano de nascimento:\n")
-ano = int(input(""))
+
+'''ano = int(input("Digite seu ano de nascimento"))
 idade = 2025 - ano
 if idade >= 18:
     print("Você pode votar este ano.")
@@ -30,9 +30,9 @@ else:
         ACESSO PERMITIDO caso a senha seja válida.
         ACESSO NEGADO caso a senha seja inválida.'''
 
-'''print("Digite a senha (quatro dígitos):\n")
-senha = int(input(""))
-if senha == 1234:
+'''senha = "1234"
+tentativa = input("Digite a senha:\n")
+if senha == tentativa:
     print("ACESSO PERMITIDO")
 else:
     print("ACESSO NEGADO")'''
@@ -55,7 +55,7 @@ else:
     Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e
     escrevê-los em ordem crescente'''
     
-'''print("Digite três valores inteiros diferentes")
+'''
 a = int(input("Primeiro valor:\n"))
 b = int(input("Segundo valor:\n"))
 c = int(input("Terceiro valor:\n"))
@@ -75,17 +75,51 @@ else:
     print("Valores inválidos")'''
 
 '''Exercício 5
+    Exercício 5 feito da maneira "incorreta"''' 
+    
+'''a = int(input("Primeiro valor:\n"))
+b = int(input("Segundo valor:\n"))
+c = int(input("Terceiro valor:\n"))
+if a > b:
+    a, b = b, a
+if a > c:
+    a, c = c, a
+if b > c:
+    b, c = c, b
+print(a, b, c)'''
+
+'''Exercício 5
+    Exercício 5 feito da maneira corrigida pelo professor, ainda não otimizada'''
+
+'''a = int(input("Primeiro valor:\n"))
+b = int(input("Segundo valor:\n"))
+c = int(input("Terceiro valor:\n"))
+
+if a > b and a > c:
+    aux = a
+    a = c
+    c = aux
+elif b > c:
+    aux = b
+    b = c
+    c = aux
+if b < a:
+    aux = a
+    a = b
+    b = aux
+
+print(a,b,c)'''
+
+'''Exercício 5
     Exercício 5 feito de uma maneira diferente, utilizando"sort"'''
 
-'''print("Digite três valores inteiros diferentes")
+'''
 a = int(input("Primeiro valor:\n"))
 b = int(input("Segundo valor:\n"))
 c = int(input("Terceiro valor:\n"))
 lista = [a, b, c]
 lista.sort()
-print(lista)
-if a == b or a == c or b == c:
-    print("Valores inválidos")'''
+print(lista)'''
 
     
 '''Exercício 6
@@ -103,7 +137,7 @@ if sexo == 1:
 else:
     print(f"Seu peso ideal é: {idealmasc}")'''
 
-'''Exercício 7
+'''Exercício 7 (NÃO OTIMIZADO)
     Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm).
     Calcular e imprimir o seguinte:
     - Se o número de lados for igual a 3 escrever TRIÂNGULO e o valor da área.
@@ -122,7 +156,7 @@ elif lados == 5:
 else:
     print("Escolha um número de lados válido (3, 4 ou 5)")'''
 
-'''Exercício 8'
+'''Exercício 8 (NÃO OTIMIZADO)
     Acresente as seguintes mensagens à solução do exercício anterior conforme o caso.
     - Caso o número de lados seja inferior a 3 escrever NÃO É UM POLÍGONO.'
     - Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO.'''
@@ -142,33 +176,32 @@ if lados < 3:
     print("NÃO É UM POLÍGONO")
 elif lados > 5:
     print("POLÍGONO NÃO IDENTIFICADO")'''
-
+    
 '''Exercício 9
     Escreva um programa para ler 3 valores inteiros e escrever o maior deles.'
     Considere que o usuário não informará valores iguais.'''
-
-'''a = int(input("Digite o primeiro número\n"))
+'''
+a = int(input("Digite o primeiro número\n"))
 b = int(input("Digite o segundo número\n"))
 c = int(input("Digite o terceiro número\n"))
 if a > b and a > c:
     print(f"O número {a} é o maior")
-elif b > a and b > c:
+elif b > c:
     print(f"O número {b} é o maior")
 else:
     print(f"O número {c} é o maior")'''
-
 '''Exercício 10
     Escreva um programa que leia as medidas dos lados de um triângulo e escreva se ele é equilátero, isósceles ou escaleno.
     Sendo que:
     - Triângulo Equilátero: possui os 3 lados iguais.
-    - Triângulo Isósceles: possui 2 lados iguais.'
+    - Triângulo Isósceles: possui 2 lados iguais.
     - Triângulo Escaleno: possui 3 lados diferentes.'''
 
 '''print("Digite as medidas dos lados de um triângulo")
 a = float(input("Digite o primeiro lado\n"))
 b = float(input("Digite o segundo lado\n"))
 c = float(input("Digite o terceiro lado\n"))
-if a == b == c:
+if a == b and a == c:
     print("Este triângulo é equilátero")
 elif a == b or a == c or b == c:
     print("Este triângulo é isósceles")
@@ -187,9 +220,12 @@ else:
 a = int(input("Digite o primeiro ângulo\n"))
 b = int(input("Digite o segundo ângulo\n"))
 c = int(input("Digite o terceiro ângulo\n"))
-if a == 90 or b == 90 or c == 90:
-    print("Este triângulo é retângulo")
-elif a > 90 or b > 90 or c > 90:
-    print("Este triângulo é obtusângulo")
-elif a < 90 and b < 90 and c < 90:
-    print("Este triângulo é acutângulo")'''
+if a + b + c == 180:
+    if a == 90 or b == 90 or c == 90:
+        print("Este triângulo é retângulo.")
+    elif a > 90 or b > 90 or c > 90:
+        print("Este triângulo é obtusângulo.")
+    else:
+        print("Este triângulo é agudo.")
+else:
+    print("Isso não é um triângulo")'''
