@@ -1,0 +1,27 @@
+/* Seletor em css = tag, classe, ou id */
+
+
+/* Seletor de tag = nome da tag */
+h1 {
+    color: blueviolet;
+    font-size: 40px;
+    
+}
+
+section {
+    padding: 50px 30px 20px 60px;
+    margin-left: 40px;
+}
+
+section article {
+    background-color: #cccccc;
+    width: 500px;
+    height: 500px;
+}
+
+section article p {
+    line-height: 4;
+}
+
+/* Seletor de classe= .nomedaclasse */
+
