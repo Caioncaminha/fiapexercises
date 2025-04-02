@@ -1,15 +1,15 @@
 .desafio1 {
-    color: orange;
+  color: orange;
 }
 
 #lista1 {
-    list-style-type:circle ;
-    color: #0000ff;
-    background-color: rgb(192, 249, 191);
+  list-style-type: circle;
+  color: #0000ff;
+  background-color: rgb(192, 249, 191);
 }
 
 #lista2 {
-    list-style-type: upper-roman;
-    color: #0000ff;
-    background-color: rgb(228, 176, 240);
+  list-style-type: upper-roman;
+  color: #0000ff;
+  background-color: rgb(228, 176, 240);
 }
