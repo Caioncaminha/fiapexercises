@@ -2,13 +2,13 @@
 caso o valor seja inválido e continue pedindo até que o usuário informe um valor
 válido.'''
 
-nota = input("Digite uma nota entre zero e dez:\n")
-while not (nota.isnumeric() and 0 <= int(nota) and int(nota) <= 10):
-    print("Valor inválido")
+def nota_valida():
     nota = input("Digite uma nota entre zero e dez:\n")
-nota = int(nota)
-print(f"Sua nota é {nota}.")
-
+    while not (nota.isnumeric() and 0 <= int(nota) and int(nota) <= 10):
+        print("Valor inválido")
+        nota = input("Digite uma nota entre zero e dez:\n")
+    nota = int(nota)
+    print(f"Sua nota é {nota}.")
 
 '''2- Faça um programa que leia e valide as seguintes informações:
 a. Nome: maior que 3 caracteres;

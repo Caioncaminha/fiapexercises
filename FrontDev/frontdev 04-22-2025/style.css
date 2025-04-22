@@ -1,0 +1,35 @@
+div:hover {
+    color: aqua;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+.input1:focus{
+    background-color: yellow;
+}
+
+/* li:first-child{
+    color:orange
+}
+
+li:last-child{
+    color: red;
+} */
+
+li:not(.testitem){
+    color: orange;
+}
+
+/* :checked{
+    margin-left: 25px;
+} */
+
+input[type="radio"]:checked{
+    margin-left: 25px;
+}
