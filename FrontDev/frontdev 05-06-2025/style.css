@@ -1,0 +1,97 @@
+#grad {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(150deg, orange, black, red, blue);
+}
+
+div.vazio {
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    position: absolute;
+    left: 300px;
+    top: 150px;
+}
+
+div.transform {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    background-color: red;
+}
+
+div.transform:hover{
+    /* transform: translate(20px, 30px); */
+    /* transform: rotate(-30deg); */
+    /* transform: scale(2, 1); */
+    transform:skew(30deg, 30deg);
+
+}
+
+div.transition{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transition: height 0.3s, width 1s, padding 2s;
+}
+div.transition:hover{
+    height: 300px;
+    width: 200px;
+    padding: 20px;
+}
+
+h1{
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer{
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+div.efeito {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: um_efeito;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+@keyframes um_efeito{
+    0%{width: 100ox;}
+    25%{width: 300px;}
+    50%{width: 500px; background-color: red; height: 500px;}
+    75%{width: 700px;}
+    100%{width: 900px; background-color: aqua;}
+}
+
+/*
+animation-name: Define o nome da animação que será aplicada ao elemento.
+
+animation-duration: Determina a duração da animação em segundos ou milissegundos.
+
+animation-timing-function: Especifica a função de temporização da animação, controlando a velocidade da transição ao longo do tempo.
+(ease, linear, ease-in, ease-out, ease-in-out)
+
+animation-delay: Define o atraso antes que a animação comece em segundos ou milissegundos.
+
+animation-iteration-count: Indica quantas vezes a animação será repetida.
+(número inteiro positivo ou infinite)
+
+animation-direction: Define a direção da animação, como normal (do início ao fim), reverse (do fim ao início),
+alternate (cada ciclo alterna a direção), ou alternate-reverse (cada ciclo alterna a direção inicial).
+
+animation-fill-mode: Especifica como os estilos são aplicados antes e depois que a animação é executada.
+none (nenhum preenchimento), forwards (aplica o estado final após a animação), backwards (aplica o estado inicial antes da animação), 
+ou both (aplica tanto o estado inicial quanto o final).
+
+animation-play-state: Define o estado da animação, se está em execução ou pausada.
+running (em execução) ou paused (pausado).
+*/
