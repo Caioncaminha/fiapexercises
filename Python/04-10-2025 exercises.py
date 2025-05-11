@@ -10,6 +10,19 @@ def nota_valida():
     nota = int(nota)
     print(f"Sua nota é {nota}.")
 
+## Outra forma de fazer com melhor conduta
+
+def nota_valida_2():
+    while True:
+        nota = input("Diga sua nota: ")
+        if nota.isnumeric():
+            nota = int(nota)
+            if nota > 0 and nota < 10:
+                break
+            print("Fora do intervalo")
+        else:
+            print("Tem que ser um numero!")
+
 '''2- Faça um programa que leia e valide as seguintes informações:
 a. Nome: maior que 3 caracteres;
 b. Idade: entre 0 e 150;
@@ -23,13 +36,14 @@ def cadastro():
     while len(nome) < 3:
         nome = input("Diga seu nome: ")
     
-    while True:
+    while not(idade.isnumeric()):
+        print("Idade inválida")
         idade = input("Diga sua idade: ")
-        if idade.isnumeric():
-            idade = int(idade)
-            if idade > 0 and idade < 150:
-                break
-    
+    idade = int(idade)
+    if idade < 0 or idade > 150:
+        print("Idade inválida")
+        idade = input("Diga sua idade: ")
+
     salario = input("Diga seu salário: ")
     while not salario.isnumeric():
         salario = int(salario)
@@ -229,13 +243,17 @@ def num_indet():
             intervalo_4 += 1
         else:
             print("Digite um número entre 0 e 100")
-        break
-        
-    continuar = input("Você quer continuar? s ou n\n")
-    while not (continuar == "s" or continuar == "n"):
-        continuar = input("Você quer continuar? s ou n\n")
-        if continuar == "n":
-            break
+            
+        if 0 <= num <= 100:
+            continuar = input("Você quer continuar? s ou n\n")
+            while not (continuar == "s" or continuar == "n"):
+                continuar = input("Você quer continuar? s ou n\n")
+            if continuar == "n":
+                print(f"\nIntervalo 1: {intervalo_1}\nIntervalo 2: {intervalo_2}\nIntervalo 3: {intervalo_3}\nIntervalo 4: {intervalo_4}")
+                print("Fim")
+                break
+            else:
+                pass
 
 '''14 - Em uma eleição presidencial existem quatro candidatos. Os votos são informados
 por meio de código. Os códigos utilizados são:
@@ -250,3 +268,53 @@ O total de votos em branco;
 A percentagem de votos nulos sobre o total de votos;
 A percentagem de votos em branco sobre o total de votos. Para finalizar o
 conjunto de votos tem-se o valor zero.'''
+
+def eleicao():
+    canditato_1 = 'João'
+    canditato_2 = 'Maria'
+    canditato_3 = 'Roberto'
+    canditato_4 = 'Memphis'
+    brancos = 'brancos'
+    nulos = 'nulos'
+
+    votos_1 = 0
+    votos_2 = 0
+    votos_3 = 0
+    votos_4 = 0
+    votos_brancos = 0
+    votos_nulos = 0
+    total = 0
+    while True:
+        opcao = input(f"Escolha:\n{canditato_1}\n{canditato_2}"
+                    f"\n{canditato_3}\n{canditato_4}\n{brancos}"
+                    f"\n{nulos} ")
+        if not (opcao == canditato_1 or opcao == canditato_2 or
+                    opcao == canditato_3 or opcao == canditato_4 or
+                    opcao == brancos or opcao == nulos):
+            print("Inválido!")
+            continue
+
+        if opcao == canditato_1:
+            votos_1 += 1
+        elif opcao == canditato_1:
+            votos_2 += 1
+        elif opcao == canditato_1:
+            votos_3 += 1
+        elif opcao == canditato_1:
+            votos_4 += 1
+        elif opcao == brancos:
+            votos_brancos += 1
+        else:
+            votos_nulos += 1
+        total += 1
+        proxima = input("Quer continuar? (s/n)\n->")
+        while not (proxima == 's' or proxima == 'n'):
+            proxima = input("Quer continuar? (s/n)\n->")
+        if proxima == 'n':
+            break
+
+    print(f"{canditato_1} - {votos_1}\n{canditato_2} - {votos_2}\n"
+        f"{canditato_3} - {votos_3}\n{canditato_4} - {votos_4}\n"
+        f"{brancos} - {votos_brancos}\n{nulos} - {votos_nulos}\n")
+    print(f"Porcentagem de nulos sobre o total: {votos_nulos*100/total:.2f}")
+    print(f"Porcentagem de brancos' sobre o total: {votos_brancos*100/total:.2f}")
