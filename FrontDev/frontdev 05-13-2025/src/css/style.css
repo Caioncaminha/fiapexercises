@@ -1,0 +1,120 @@
+/* Flex Direction */
+
+/* .caixa-cinza{
+    background-color:aqua;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.caixa-direction{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 10px;
+    position: relative;
+}
+
+.numero{
+    font-size: 150%;
+    color:rgb(0 0 0);
+    font-weight: bold;
+}
+
+.circulo{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+/* 
+.caixa-branca{
+    background-color: #ffffff;
+    border: solid 1px #000000;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; nowrap, wrap, wrap-reverse 
+    flex-flow: row wrap;  aceita os valores de flex-direction e flex-wrap respectivamente nessa ordem.
+} */
+
+/* .caixa-wrap {
+    width: 100px;
+    height: 100px;
+    background-color: #6d20da;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+} */
+
+/* .caixa-azul {
+    background-color: #287bf7;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */
+
+/* .caixa-azul2 {
+    background-color: #287bf7;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    width: 111px;
+    flex-direction: column;
+    height: 600px;
+    justify-content: center;
+} */
+
+.container1{
+    border: solid 4px;
+    border-color:red ;
+    display: flex;
+    flex-direction: column-reverse; 
+}
+
+.t0{
+    font-size: 150%;
+    font: bold;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    border: dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .t1{
+    background-color: rgb(42, 165, 58);
+    }
+
+    .t2{
+    background-color: brown;
+    }
+
+    .t3{
+    background-color: rgb(165, 42, 136);
+    }
+
+    .t4{
+    background-color: rgb(165, 42, 61);
+    }
+
+    .t5{
+    background-color: rgb(44, 42, 165);
+}
