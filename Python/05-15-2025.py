@@ -172,11 +172,11 @@ maior()
 
 def posicao():
     preco = [600, 50, 80, 1000000, 5]
-    carros = ['Mustang,' 'Up', 'Gol', 'POLINHO TURBÃO MANUAL', 'Uno']
+    carros = ['Mustang', 'Up', 'Gol', 'POLINHO TURBÃO MANUAL', 'Uno']
     indice_maior = 0
     maior = preco[0]
     for i in range(len(preco)):
-        if preco[i] > maior:
+        if preco[i] > maior:    
             maior = preco[i]
             indice_maior = i
     print(f"O carro mais caro é o {carros[indice_maior]}")
