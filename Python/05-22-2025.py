@@ -118,7 +118,8 @@ def join(lista_str, sep):
     for i in range(1, len(lista_str)):
         ajuntado += sep + lista_str[i]
     return ajuntado 
-
+'''
+'''
 def escolher(lista_carros, lista_precos):
     escolha = input(f'Escolha um carro:\n{join(lista_carros, '\n')}\n-> ')
 
@@ -132,7 +133,7 @@ def escolher(lista_carros, lista_precos):
             index = i
             preco = lista_precos[i]
 
-    return f'O carro selecionado foi {escolha} que custa {preco} mil reais.'
+    return f'O carro selecionado foi {escolha} que custa {preco} mil reais.
 
 carros = ['Up', 'Gol', 'Polinho Turbão Manual', 'Uno', 'Celta']
 precos = [40, 50, 1000000, 100, 200]
