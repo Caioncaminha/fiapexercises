@@ -82,6 +82,7 @@ def cria_naipe(naipe):
 #Assim 'Jo' é um dos elementos que deve aparecer na lista
 def cria_baralho():
     pass
+    baralho = []
     nomes_cartas = {
         1:'A',
         11:'J',
@@ -94,10 +95,10 @@ def cria_baralho():
     }
 
     for numero in range(1,14):
-        nome_carta = nomes_cartas.get(numero, str(numero))
+        nome_carta = nomes_cartas.get(numero, str(numero)) 
         carta_completa = f"{nome_carta}{nomes_naipes}"
-    baralho = []
-    baralho.append(carta_completa)
+        baralho.append(carta_completa)
+
     return baralho
 
 #Faça uma função que recebe uma lista, 
