@@ -1,46 +1,52 @@
 function executarPush() {
-  const array = ['🍎', '🍌'];
-  const resultado = array;
+  const frutas = ['🍎', '🍌'];
+  frutas.push('🍇');
+  const resultado = frutas;
   document.getElementById('resultado-push').textContent = resultado;
 }
 
 function executarPop() {
   const array = ['🍎', '🍌', '🍇'];
+  array.pop();
   const resultado = array;
   document.getElementById('resultado-pop').textContent = resultado;
 }
 
 function executarShift() {
   const array = ['🍎', '🍌', '🍇'];
+  array.shift();
   const resultado = array;
   document.getElementById('resultado-shift').textContent = resultado;
 }
 
 function executarUnshift() {
   const array = ['🍌', '🍇'];
-  const resultado = 'Resultado da operação unshift';
+  array.unshift('🍎');
+  const resultado = array;
   document.getElementById('resultado-unshift').textContent = resultado;
 }
 
 function executarIncludes() {
   const array =  ['🍎', '🍌', '🍇'];
-  const resultado = array;
+  const resultado = array.includes('🥝');
   document.getElementById('resultado-includes').textContent = resultado;
 }
 
 function executarReverse() {
   const array = ['🍎', '🍌', '🍇'];
-  const resultado = array;
+  const resultado = array.reverse();
   document.getElementById('resultado-reverse').textContent = resultado;
 }
 
 function executarSort() {
-  const array = [3, 1, 4, 2];
+  const array = [3, 1, 4, 2, 11];
   const array2 = ["Brasil", "Argentina", "Noruega", "Italia"];
 
-  const resultado = array;
+  const resultado = array.sort(function (a,b){
+    return a - b;
+  });
   document.getElementById('resultado-sort').textContent = resultado;
-  const resultado2 = array2;
+  const resultado2 = array2.sort().reverse();
   document.getElementById('resultado-sort2').textContent = resultado2;
 }
 
@@ -73,7 +79,9 @@ function executarJoin() {
 
 function executarForEach() {
   const array = ['🍎', '🍌', '🍇'];
-  const resultado = 'Resultado da operação forEach';
+  const resultado = array.forEach( function (pegaItem){
+    console.log(pegaItem);
+  });
   document.getElementById('resultado-foreach').textContent = resultado;
 }
 
