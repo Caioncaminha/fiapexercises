@@ -1,0 +1,42 @@
+@media only screen and (min-width: 1280px) {
+    body {
+        background-color: black;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    body {
+        background-color:rgb(106, 106, 107);
+    }
+}
+
+.container {
+    display: grid;
+    height: 80vh;
+    gap: 10px;
+    grid-template-areas:
+        "header header header"
+        "main main aside";
+}
+header {
+    grid-area: header;
+    background-color: red;
+}
+
+main {
+    grid-area: main;
+    background-color: green;
+}
+aside {
+    grid-area: aside;
+    background-color: yellow;
+}
+
+@media only screen and (max-width: 1279px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "aside aside aside";
+    }
+}
