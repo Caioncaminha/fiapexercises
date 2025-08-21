@@ -137,11 +137,11 @@ o Abaixo de 70: "Conceito D"
 def notas():
     nota = input("Digite sua nota: \n")
     if nota >= 90:
-        print("Coinceito A")
+        print("Conceito A")
     elif nota >= 80 and nota < 90:
         print("Conceito B")
     elif nota >= 70 and nota < 80:
-        print("Coinceito C")
+        print("Conceito C")
     else:
         print("Conceito D")
 
@@ -151,55 +151,108 @@ Solicite a temperatura:
 o Acima de 30°C: "Muito quente"
 o Entre 15°C e 30°C: "Temperatura agradavel"
 o Abaixo de 15°C: "Frio"
+'''
+
+
+'''
 13. Desempenho do Aluno:
 Solicite uma pontuacao (0 a 100):
 o Pontuacao ≥ 85: "Excelente"
 o Entre 70 e 84: "Bom"
 o Entre 50 e 69: "Regular"
 o Abaixo de 50: "Insuficiente"
+'''
+
+
+'''
 14. Clima do Dia:
 Peca ao usuario para informar o tempo (ex.: "ensolarado", "nublado",
 "chuvoso") e exiba uma mensagem especifica para cada caso usando elif.
 (Exemplo: se "ensolarado", exiba "Dia perfeito para sair"; se "chuvoso",
 "Leve um guarda-chuva"; senão, "Aproveite o dia!")
+'''
+
+
+'''
 15. Classificação Etária:
 Solicite a idade e classifique:
 o Menor que 12: "Crianca"
 o Entre 12 e 17: "Adolescente"
 o Entre 18 e 64: "Adulto"
 o 65 ou mais: "Idoso"
+'''
+
+
+'''
 16. Número no Intervalo (10 a 20):
 Solicite um numero e, se ele estiver entre 10 e 20 (inclusive), exiba
 "Numero no intervalo".
+'''
+
+
+
+'''
 17. Número Positivo e Par:
 Peca um numero e, se ele for positivo e par, exiba "Numero positivo e par".
+'''
+
+
+'''
 18. Acesso com Documento:
 Solicite a idade e se o usuario possui documento ("sim" ou "nao"). Se a
 idade for maior ou igual a 18 e a resposta for "sim", exiba "Acesso
 permitido".
+'''
+
+
+'''
 19. Desconto para Idosos ou Clientes com Cartão:
 Solicite a idade e se o cliente possui cartao de desconto ("sim" ou "nao").
 Se a idade for 65 ou mais ou se o cliente tiver o cartao, exiba "Desconto
 aplicado".
+'''
+
+
+'''
 20. Autorização para Votar:
 Solicite a idade e se o usuario possui impedimento para votar ("sim" ou
 "nao"). Se a idade for maior ou igual a 16 e a resposta for "nao", exiba "Pode
 votar".
+'''
+
+
+'''
 21. Verificação de Caracteres na Senha:
 Solicite uma senha e, se ela contiver pelo menos um dos caracteres "!",
 "@" ou "#" e alem disso tiver mais de 10 caracteres exiba "Senha forte".
+'''
+
+
+'''
 22. Número Dentro do Intervalo (1 a 100) com Not:
 Solicite um numero e, se não for menor que 1 e nao for maior que 100,
 exiba "Numero dentro do intervalo de 1 a 100". Utilize o operador not para
 simplificar a condicao.
+'''
+
+
+'''
 23. Aprovação do Aluno:
 Solicite a nota e a frequencia (em porcentagem) do aluno. Se a nota for
 maior ou igual a 6 e a frequencia for maior ou igual a 75, exiba "Aprovado".
+'''
+
+
+'''
 24. Recuperação ou Reprovação:
 Solicite a nota e a frequencia. Se a nota for menor que 6 e a frequencia for
 maior ou igual a 75, exiba "Faca a recuperacao"; se a nota for menor que 6
 e a frequencia for menor que 75, exiba "Reprovado". Se a nota for maior
 que 6 e a frequencia maior que 75, exiba “Aprovado”.
+'''
+
+
+'''
 25. Aposentadoria:
 Solicite o ano de nascimento e o tempo de contribuicao. Condicoes para
 aposentadoria:
@@ -207,21 +260,41 @@ aposentadoria:
 • Idade for maior ou igual a 60 e tempo de contribuicao for maior ou
 igual a 30)
 Exiba "Pode se aposentar" se uma dessas condicoes for satisfeita.
+'''
+
+
+'''
 26. Acesso ao Sistema:
 Solicite o login e a senha. Se o login for "admin" e a senha for "1234", exiba
 "Acesso liberado"; senao, exiba "Acesso negado".
+'''
+
+
+'''
 27. Ano Bissexto:
 Solicite um ano e, se ele for divisivel por 4 e (nao divisivel por 100 ou
 divisivel por 400), exiba "Ano bissexto".
 (Utilize parênteses para deixar clara a precedência dos operadores.)
+'''
+
+
+'''
 28. Promoção de Produto:
 Solicite o preco do produto e se ele esta em estoque ("sim" ou "nao"). Se o
 preco for menor que 50 e o produto estiver em estoque, exiba "Produto em
 promocao".
+'''
+
+
+'''
 29. Participação em Sorteio:
 Solicite a idade e se o usuario ja participou de um sorteio ("sim" ou "nao").
 Se a idade for maior ou igual a 18 e a resposta for "nao", exiba "Pode
 participar do sorteio".
+'''
+
+
+'''
 30. Bolsa de Estudos:
 Solicite a media do aluno, a renda familiar e se participa de atividades
 extracurriculares ("sim" ou "nao"). Condicoes para ser elegivel para bolsa:
