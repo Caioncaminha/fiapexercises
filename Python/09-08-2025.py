@@ -1,3 +1,11 @@
+#Cálculo
+#At (x,h) = 2.2xh + 2xh +2x²
+#At (x,h) = 6xh + 2x²
+#Ct (x,h) = 16.6xh + 15.2x²
+#Ct (x) = 96x.5/2x² + 30x²
+#Ct (x) = 480/x + 30x²
+
+
 
 '''
 Um dicionário é muito semelhante a uma lista.
