@@ -210,7 +210,6 @@ https://pythontutor.com/visualize.html#code=agenda_melhor1%20%3D%20%7B%0A%20%20%
 '''
 #python -i 09-08-2025.py
 def email(agenda,pessoa):
-    agenda = agenda_melhor1
     return agenda[pessoa]['email']
 
 '''
@@ -221,8 +220,6 @@ Ela retorna o primeiro telefone da lista de telefones da
 pessoa
 '''
 def telefone_principal(agenda,pessoa):
-    agenda = agenda_melhor1
-    
     return agenda[pessoa]['telefones'][0]
 
 '''
@@ -253,8 +250,9 @@ lista com um único contato: ['marta']
 
 def sem_email(agenda):
     lista = []
-    if agenda['email'] == None:
-        lista.append(agenda['pessoa'])
+    for pessoa in agenda.keys():
+        if 'email' not in agenda[pessoa].keys():
+            lista.append(pessoa)
     return lista
 
 
@@ -269,7 +267,10 @@ e no item lucas
 '''
 
 def conta_telefones(agenda):
-    return 12
+    lista = 0
+    for pessoa in agenda.keys():
+        lista += len(agenda[pessoa]['telefones'])
+    return lista
 
 '''
 Por ultimo, vamos criar uma funcao conta_ocorrencias
@@ -282,8 +283,14 @@ número apareceu na agenda
 '''
 
 def conta_ocorrencias(agenda):
-    return {1122224444:3}
-
+    dici = {}
+    for pessoa in agenda.keys():
+        if 'telefones' in agenda[pessoa]:
+            for tele in agenda[pessoa]['telefones']:
+                if tele not in dici.keys():
+                    dici[tele] = 0
+                dici[tele] += 1
+    return dici
 
 #nao mexa a partir daqui
 #pode ler, mas não altere, para não zoar seus testes
@@ -361,7 +368,7 @@ class TestPartOne(unittest.TestCase):
         self.assertEqual(conta_letras('a'*5+'b'*3+'c'*10+'a'),{'a':6,'b':3,'c':10})
 
     def test_05_email(self):
-        self.assertEqual(email(agenda_melhor2,'lucas'),'pf1561@fiap.com.br')
+        self.assertEqual(email(agenda_melhor2,'lucas'),'lucas.goncalves@faculdadeimpacta.com.br')
         self.assertEqual(email(agenda_melhor2,'maria'),'maria.aparecida@exemplo.com')
         self.assertEqual(email(agenda2,'fulano'),'fulano@exemplo.com')
         self.assertEqual(email(agenda3,'fulano'),'fulano@exemplo.com')
