@@ -136,7 +136,10 @@ as strings "1" e "5" em números inteiros
 '''
 
 def qtos_libertadores(dados):
-    pass
+    qtd = dados['fases']['2700']['faixas-classificacao']['classifica1']['faixa']
+    qtd_list = qtd.split('-')
+    lista = qtd_list[1]
+    return int(lista)
 
 '''
 A proxima funcao recebe um tamanho, e retorna uma lista
@@ -145,7 +148,11 @@ das ids dos times melhor classificados.
 O tamanho da lista que deve ser retornada é o argumento "numero_de_times"
 '''
 def ids_dos_melhor_classificados(dados,numero_de_times):
-    pass
+    lista = []
+    for i in range(numero_de_times):
+        id = dados['fases']['2700']['classificacao']['grupo']['Único'][i]
+        lista.append(id)
+    return lista
 
 '''
 A proxima funcao usa as duas anteriores para retornar uma 
@@ -159,7 +166,9 @@ A funcao so recebe o dicionario de dados do brasileirao
 
 '''
 def classificados_libertadores(dados):
-    pass
+    qtd = qtos_libertadores(dados)
+    ids = ids_dos_melhor_classificados(dados, qtd)
+    return ids
 
 
 '''
@@ -167,14 +176,18 @@ Usando as duas funcoes anteriores, podemos fazer uma que retorna os nomes dos cl
 '''
 
 def nomes_classificados_libertadores(dados):
-    pass
+    ids = classificados_libertadores(dados)
+    nome = []
+    for i in ids:
+        nome.append(nome_do_time(dados, i))
+    return nome
 
 '''
 Nos nossos dados, cada time tem um id, uma identificacao numerica.
 (voce pode consultar as identificacoes numericas em dados['equipes'])
 
 Essas id também aparecem nos jogos 
-para ver o jogo 192094, experimente
+para ver o jogo 102094, experimente
 
 pprint(dados2018['fases']['2700']['jogos']['id']['102094'])
 
@@ -190,8 +203,9 @@ def ids_dos_times_de_um_jogo(dados,id_jogo):
     return time1,time2 #assim a gente retorna as duas respostas em um unico return
 '''
 def ids_dos_times_de_um_jogo(dados,id_jogo):
-    time1 = 12
-    time2 = 13
+    id = dados['fases']['2700']['jogos']['id'][id_jogo]
+    time1 = id['time1']
+    time2 = id['time2']
     return time1,time2 #assim a gente retorna as duas respostas em um unico return
 
 '''
@@ -204,7 +218,10 @@ somente fazer os meus testes. Para isso, note que muitos numeros
 nesse arquivo estao representados nao como números, mas como strings)
 '''
 def nomes_dos_times_de_um_jogo(dados,id_jogo):
-   pass
+    (time1, time2) = ids_dos_times_de_um_jogo(dados, id_jogo)
+    nome1 = nome_do_time(dados, time1)
+    nome2 = nome_do_time(dados, time2)
+    return (nome1,nome2)
 
 '''
 Façamos agora a busca "ao contrário". Conhecendo
