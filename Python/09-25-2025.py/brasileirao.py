@@ -204,8 +204,7 @@ def ids_dos_times_de_um_jogo(dados,id_jogo):
 '''
 def ids_dos_times_de_um_jogo(dados,id_jogo):
     id = dados['fases']['2700']['jogos']['id'][id_jogo]
-    time1 = id['time1']
-    time2 = id['time2']
+    (time1,time2) = (id['time1'], id['time2'])
     return time1,time2 #assim a gente retorna as duas respostas em um unico return
 
 '''
@@ -230,7 +229,12 @@ o nome-comum de um time, queremos saber sua id.
 Se o nome comum nao existir, retorne 'nao encontrado'
 '''
 def id_do_time(dados,nome_time):
-    pass
+    dic = dados['equipes']
+    for id_time in dic.keys():
+        time = (dados['equipes'][id_time]['nome-comum'])
+        if time == nome_time:
+            return id_time
+    return 'nao achei'
 
 
 '''
